@@ -1,17 +1,15 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+      <Logo />
       <h1 class="title">
-        nuxtjs
+        nuxt-flag
       </h1>
-      <h2 class="subtitle">
-        My astonishing Nuxt.js project
-      </h2>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
           target="_blank"
+          rel="noopener noreferrer"
           class="button--green"
         >
           Documentation
@@ -19,24 +17,28 @@
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
+          rel="noopener noreferrer"
           class="button--grey"
         >
           GitHub
         </a>
       </div>
+      <hr/>
+      <country-flag country='it'/>
+      <country-flag country='se' size='big'/>
+      <country-flag country='it'/>
     </div>
   </div>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-
+<!--script>
+import CountryFlag from 'vue-country-flag'
 export default {
   components: {
-    Logo
+    CountryFlag
   }
 }
-</script>
+</script-->
 
 <style>
 .container {
@@ -49,8 +51,16 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family:
+    'Quicksand',
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
